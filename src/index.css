@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Kereyu Medical Institute Design System - Light Theme */
+    --background: 30 12% 96%; /* Warm Light Gray */
+    --foreground: 210 24% 16%; /* Charcoal Gray */
+
+    --card: 0 0% 100%; /* Pure White */
+    --card-foreground: 210 24% 16%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 24% 16%;
+
+    /* Primary: Deep Forest Green */
+    --primary: 150 45% 20%; /* #1E4A2B */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Warm Terracotta */
+    --secondary: 18 64% 47%; /* #C45C2A */
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent: Muted Gold */
+    --accent: 40 32% 56%; /* #B59A6A */
+    --accent-foreground: 210 24% 16%;
+
+    /* Muted: Soft Sage */
+    --muted: 80 21% 52%; /* #8A9B68 */
+    --muted-foreground: 210 24% 16%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 30 12% 88%;
+    --input: 30 12% 88%;
+    --ring: 150 45% 20%;
+
+    --radius: 0.75rem;
+
+    /* Hero gradient */
+    --gradient-hero: linear-gradient(135deg, hsl(150 45% 20% / 0.95), hsl(18 64% 47% / 0.9));
+    
+    /* Card hover */
+    --shadow-card: 0 4px 20px hsl(150 45% 20% / 0.08);
+    --shadow-card-hover: 0 8px 30px hsl(150 45% 20% / 0.15);
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    /* Kereyu Medical Institute Design System - Dark Theme */
+    --background: 210 24% 16%; /* Charcoal Gray */
+    --foreground: 30 12% 96%; /* Warm Light Gray */
+
+    --card: 210 24% 20%;
+    --card-foreground: 30 12% 96%;
+
+    --popover: 210 24% 20%;
+    --popover-foreground: 30 12% 96%;
+
+    /* Primary: Lighter Forest Green for dark mode */
+    --primary: 150 40% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Warm Terracotta (brighter in dark) */
+    --secondary: 18 70% 55%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Accent: Muted Gold (brighter in dark) */
+    --accent: 40 38% 65%;
+    --accent-foreground: 210 24% 16%;
+
+    /* Muted: Soft Sage */
+    --muted: 80 18% 42%;
+    --muted-foreground: 30 12% 80%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 24% 28%;
+    --input: 210 24% 28%;
+    --ring: 150 40% 35%;
+
+    /* Hero gradient for dark mode */
+    --gradient-hero: linear-gradient(135deg, hsl(210 24% 16% / 0.95), hsl(150 45% 15% / 0.9));
+    
+    /* Card shadows for dark mode */
+    --shadow-card: 0 4px 20px hsl(0 0% 0% / 0.3);
+    --shadow-card-hover: 0 8px 30px hsl(0 0% 0% / 0.5);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
